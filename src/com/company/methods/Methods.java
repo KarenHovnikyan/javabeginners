@@ -11,8 +11,9 @@ public class Methods {
 
         methods.return0(40, 50);
         float f = methods.floatOneParametrs(5.6f, 9.4f);
-        methods.recursion();
 
+        int result = methods.sumNumbers1_n(5);
+        System.out.println(result);
     }
 
     /**
@@ -42,6 +43,21 @@ public class Methods {
      */
     void recursion() {
         recursion();
+    }
+
+    /**
+     * Sum numbers 1 -N
+     *
+     * @param n
+     * @return Sum 1-N
+     */
+    int sumNumbers1_n(int n) {
+        if (n > 0) {
+            return n + sumNumbers1_n(n - 1);
+        } else {
+            return 0;
+        }
+
     }
 
 }
