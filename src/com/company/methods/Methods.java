@@ -20,7 +20,7 @@ public class Methods {
      *
      * @param a
      * @param b
-     * @return a
+     * @return 0
      */
     int return0(int a, int b) {
         return 0;
@@ -31,7 +31,7 @@ public class Methods {
      *
      * @param a
      * @param b
-     * @return a
+     * @return a  or b
      */
     float floatOneParametrs(float a, float b) {
         return a;
@@ -39,8 +39,6 @@ public class Methods {
 
     /**
      * Write a method which  .has  two float input parameters  and return  one of them.
-     *
-     * @return a
      */
     void recursion() {
         recursion();
