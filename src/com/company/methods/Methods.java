@@ -7,6 +7,11 @@ package com.company.methods;
 public class Methods {
 
     public static void main(String[] args) {
+        Methods methods = new Methods();
+
+        methods.return0(40, 50);
+        float f = methods.floatOneParametrs(5.6f, 9.4f);
+        methods.recursion();
 
     }
 
