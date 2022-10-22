@@ -1,5 +1,7 @@
 package com.company.simple_class;
 
+import java.util.Objects;
+
 /**
  * @author Karen
  */
@@ -10,40 +12,43 @@ public class Employee {
     private int age;
     private String gender;
 
+    public Employee(int id, int age, String name, String department, String gender) {
+        this.id = id;
+        this.age = age;
+        this.name = name;
+        this.department = department;
+        this.gender = gender;
+    }
+
     public static void main(String[] args) {
-        Employee employee1 = new Employee();
-        employee1.id = 1;
-        employee1.age = 20;
-        employee1.gender = "mile";
-        employee1.department = "N4";
-        employee1.name = "Avik";
+        Employee employee1 = new Employee(1, 20, "mile", "N4", "Aram");
+        Employee employee2 = new Employee(3, 20, "mile", "N4", "Arshak");
+        Employee employee3 = new Employee(4, 25, "female", "N3", "Lili");
 
-        Employee employee2 = new Employee();
-        employee2.id = 3;
-        employee2.age = 20;
-        employee2.gender = "mile";
-        employee2.department = "N4";
-        employee2.name = "Avik";
-
-        Employee employee3 = new Employee();
-        employee3.id = 4;
-        employee3.age = 25;
-        employee3.gender = "mile";
-        employee3.department = "N7";
-        employee3.name = "Ani";
-
+        System.out.println(employee1.toString());
     }
 
-    /**
-     * Print information about Employee
-     */
-    void print() {
-        System.out.println("ID = " + id);
-        System.out.println("Name = " + name);
-        System.out.println("Department = " + department);
-        System.out.println("Age = " + age);
-        System.out.println("Gender = " + gender);
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", department='" + department + '\'' +
+                ", age=" + age +
+                ", gender='" + gender + '\'' +
+                '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id && age == employee.age && name.equals(employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, age);
+    }
 }
