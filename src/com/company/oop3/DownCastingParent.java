@@ -6,15 +6,15 @@ package com.company.oop3;
 public class DownCastingParent {
 }
 
-class Child extends DownCastingParent {
+class Childs extends DownCastingParent {
 
     public static void main(String[] args) {
 
-        Child c = new Child();
+        Childs c = new Childs();
 
         DownCastingParent p = c;
 
-        Child t = (Child) p;
+        Childs t = (Childs) p;
 
     }
 
