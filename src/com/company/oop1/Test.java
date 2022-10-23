@@ -13,6 +13,6 @@ public class Test {
 
         System.out.println(person.getAge());
         System.out.println(person.getName());
-
     }
+
 }
