@@ -13,6 +13,18 @@ public class Test {
 
         System.out.println(person.getAge());
         System.out.println(person.getName());
+
+
+        int a = 0;
+        PassByValue p = new PassByValue();
+        p.print(a);
+        System.out.println(a); // 0
+
+
+        StringBuilder str = new StringBuilder("Hello");
+        PassByReference passByReference = new PassByReference();
+        passByReference.print(str);
+        System.out.println(str); // Hello World
     }
 
 }
