@@ -8,7 +8,7 @@ public abstract class Abstract {
 }
 
 class Daughter extends Abstract {
-    @Overriding
+    @Override
     void run() {
         System.out.println("Daughter -> Abstract");
     }
