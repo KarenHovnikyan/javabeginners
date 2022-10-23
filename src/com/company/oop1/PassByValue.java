@@ -6,15 +6,16 @@ package com.company.oop1;
 public class PassByValue {
     public static void main(String[] args) {
         int a = 0;
-        //print(a);
-        System.out.print(a); // 0
+        PassByValue p = new PassByValue();
+        p.print(a);
+        System.out.println(a); // 0
 
     }
 
 
     public void print(int i) {
         i += 5;
-        System.out.print(i); //5
+        System.out.println(i); //5
     }
 
 }
