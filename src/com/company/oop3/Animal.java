@@ -4,9 +4,7 @@ package com.company.oop3;
  * @author Karen
  */
 public abstract interface Animal {
-
     public abstract void animalSound();
-
 }
 
 
